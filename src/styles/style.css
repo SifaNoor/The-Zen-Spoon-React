@@ -148,7 +148,7 @@ nav {
 .heroimage {
     /* Potential pictures: https://nypost.com/wp-content/uploads/sites/2/2019/07/hutong-spread-1a.jpg?quality=75&strip=all&w=1200; */
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), url("https://alexanriverside.com/wp-content/uploads/2024/01/Alexan-Riverside-Jan-26-2048x1396.jpg");
-    height: 90%;
+    height: 90vh;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
