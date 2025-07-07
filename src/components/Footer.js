@@ -13,12 +13,12 @@ function Footer() {
             <div className="footercontent">
                 <p className="footertitle">Follow Us</p>
                 <div className="socialmedia">
-                    <a href="https://www.facebook.com/springshabushabu/" target="_blank" className="social-link"><i className="fab fa-facebook"></i></a>
-                    <a href="https://www.instagram.com/springshabushabu.flushing/?hl=en" target="_blank" className="social-link"><i className="fab fa-instagram"></i></a>
-                    <a href="https://x.com/springshabu" target="_blank" className="social-link"><i className="fab fa-twitter"></i></a>
-                    <a href="https://www.yelp.com/biz/spring-shabu-shabu-flushing-6" target="_blank" className="social-link"><i className="fab fa-yelp"></i></a>
+                    <a href="https://www.facebook.com/springshabushabu/" target="_blank" rel="noreferrer" className="social-link"><i className="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com/springshabushabu.flushing/?hl=en" target="_blank" rel="noreferrer" className="social-link"><i className="fab fa-instagram"></i></a>
+                    <a href="https://x.com/springshabu" target="_blank" rel="noreferrer" className="social-link"><i className="fab fa-twitter"></i></a>
+                    <a href="https://www.yelp.com/biz/spring-shabu-shabu-flushing-6" target="_blank" rel="noreferrer" className="social-link"><i className="fab fa-yelp"></i></a>
                 </div>
-            </div>
+            </div> 
         </div>
         <div className="footer-bottom">
             <p>&copy; 2025 The Zen Spoon.</p>
