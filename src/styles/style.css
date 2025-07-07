@@ -483,10 +483,12 @@ nav {
     padding: 16px;
     color: white;
     font-weight: bolder;
-    font-size: 18px;
+    font-size: 22px;
     transition: 0.3s;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background: transparent;
+    border: none; 
 }
 
 .nextimage {
@@ -865,9 +867,10 @@ nav {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.4);
   display: flex;
   justify-content: space-between;
-  font-size: 23px;
-  font-weight: bold;
+  font-size: 22px;
+  font-weight: bold !important;
   letter-spacing: 2px;
+  font-family: "Cormorant Garamond", serif !important;
 }
 
 .exitcart {
@@ -1024,4 +1027,26 @@ nav {
     width: 100%;
     right: -100%;
   }
+}
+
+/* Toast Message */
+.cart-toast {
+  position: fixed;
+  top: 80px;
+  right: 20px;
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-family: "Cormorant Garamond", serif;
+  z-index: 2000;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  animation: fadeInOut 2s ease forwards;
+}
+
+@keyframes fadeInOut {
+  0% { opacity: 0; transform: translateY(-10px); }
+  10% { opacity: 1; transform: translateY(0); }
+  90% { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(-10px); }
 }
