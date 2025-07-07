@@ -1,6 +1,16 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import { CartContext } from '../components/CartContext';
 
-function Menu() {
+function Menu({ onAddToCart }) {
+    const { addToCart } = useContext(CartContext);
+
+    const handleAddToCart = (name, price) => {
+        addToCart(name, price);
+        if (onAddToCart) {
+          onAddToCart(name, price);
+        }
+    };
+
     return (
         <section id = "menu">
         <p className="heading">MENU</p>
@@ -17,7 +27,7 @@ function Menu() {
                         <p>Sashimi grade tuna served on fried rice with a spicy dressing and sesame seeds.</p>
                         <div className = "cardbottom">
                             <span className="price">$8</span>
-                            <button className = "addbutton" data-name="Spicy Tuna Crispy Rice" data-price="8">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Spicy Tuna Crispy Rice", 8)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -30,7 +40,7 @@ function Menu() {
                         <p>Wontons shaped as little bowls containing vegetables, sauces, and your choice of meat or seafood.</p>
                         <div className = "cardbottom">
                             <span className="price">$10</span>
-                            <button className = "addbutton" data-name="Asian Wonton Cups" data-price="10">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Asian Wonton Cups", 10)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>               
@@ -50,7 +60,7 @@ function Menu() {
                         <p>Tortilla chips topped with chicken, toppings, cheese, and a special Pad-thai sauce.</p>
                         <div className = "cardbottom">
                             <span className="price">$15</span>
-                            <button className = "addbutton" data-name="Pad Thai Nachos" data-price="15">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Pad Thai Nachos", 15)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -63,7 +73,7 @@ function Menu() {
                         <p>A fusion dish that combines lasagna with the popular Indian Butter Chicken.</p>
                         <div className = "cardbottom">
                             <span className="price">$18</span>
-                            <button className = "addbutton" data-name="Butter Chicken Lasagna" data-price="18">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Butter Chicken Lasagna", 18)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -76,7 +86,7 @@ function Menu() {
                         <p>Stir-fried chicken served over rice topped with a black pepper sauce.</p>
                         <div className = "cardbottom">
                             <span className="price">$16</span>
-                            <button className = "addbutton" data-name="Black Pepper Chicken" data-price="16">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Black Pepper Chicken", 16)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -89,7 +99,7 @@ function Menu() {
                         <p>Warm tortillas topped with salmon, miso slaw, and coated with a miso paste.</p>
                         <div className = "cardbottom">
                             <span className="price">$15</span>
-                            <button className = "addbutton" data-name="Miso Glazed Salmon Tacos" data-price="15">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Miso Glazed Salmon Tacos", 15)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -109,7 +119,7 @@ function Menu() {
                         <p>A creamy matcha green tea cheesecake.</p>
                         <div className = "cardbottom">
                             <span className="price">$4</span>
-                            <button className = "addbutton" data-name="Matcha Cheesecake" data-price="4">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Matcha Cheesecake" , 4)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -122,7 +132,7 @@ function Menu() {
                         <p>A creamy custard that combines the flavor of crème brûlée and Thai tea.</p>
                         <div className = "cardbottom">
                             <span className="price">$5</span>
-                            <button className = "addbutton" data-name="Thai Tea Crème Brûlée" data-price="5">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Thai Tea Crème Brûlée", 5)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -142,7 +152,7 @@ function Menu() {
                         <p>A delicious creamy drink combining the taste of coconut milk and matcha powder.</p>
                         <div className = "cardbottom">
                             <span className="price">$3</span>
-                            <button className = "addbutton" data-name="Coconut Matcha Smoothie" data-price="3">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Coconut Matcha Smoothie", 3)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>
@@ -155,7 +165,7 @@ function Menu() {
                         <p>A fizzy and refreshing drink combining the taste of lychee, ginger, and mint.</p>
                         <div className = "cardbottom">
                             <span className="price">$3</span>
-                            <button className = "addbutton" data-name="Lychee Ginger Mint Fizz" data-price="3">Add to Cart</button>
+                            <button className = "addbutton" onClick={() => handleAddToCart("Lychee Ginger Mint Fizz", 3)}>Add to Cart</button>
                         </div>
                     </div>
                 </div>

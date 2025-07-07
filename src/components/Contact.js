@@ -1,6 +1,22 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Contact() {
+    const [name, setName] = useState('');
+    const [email, setEmail] = useState('');
+    const [message, setMessage] = useState('');
+  
+    const handleSubmit = (e) => {
+      e.preventDefault();
+      if (name && email && message) {
+        alert('Thank you for your message! We will get back to you soon.');
+        setName('');
+        setEmail('');
+        setMessage('');
+      } else {
+        alert('Please fill in all fields.');
+      }
+    };
+    
     return (
         <section id ="contact">
             <p className="heading">CONTACT US</p>
@@ -15,18 +31,39 @@ function Contact() {
                             <h4><i className="fas fa-phone-alt"></i> Phone</h4>
                                 <p>(917) 123-4567</p>
                             <h4><i className="fas fa-envelope"></i> Email</h4>
-                                <p>   hellozen@zenspoon.com</p>
+                                <p>hellozen@zenspoon.com</p>
                         </div>
                     </div>
 
-                    <div className="contactform"> 
-                        <form>
-                            <input type="text" id="name" placeholder="Your Name" required />
-                            <input type="email" id="email" placeholder="Your Email" required />
-                            <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
-                            <button type="submit">Send Message</button>
-                        </form>
-                    </div> 
+                <div className="contactform">
+                    <form onSubmit={handleSubmit}>
+                    <input
+                        type="text"
+                        id="name"
+                        placeholder="Your Name"
+                        value={name}
+                        onChange={(e) => setName(e.target.value)}
+                        required
+                    />
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Your Email"
+                        value={email}
+                        onChange={(e) => setEmail(e.target.value)}
+                        required
+                    />
+                    <textarea
+                        rows="5"
+                        id="message"
+                        placeholder="Your Message"
+                        value={message}
+                        onChange={(e) => setMessage(e.target.value)}
+                        required
+                    ></textarea>
+                    <button type="submit">Send Message</button>
+                    </form>
+                </div>
                 </div>
             </div>
 
